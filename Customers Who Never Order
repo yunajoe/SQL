@@ -1,0 +1,8 @@
+# Write your MySQL query statement below
+# order table의 customerId에 해당되지 않는 name
+
+select name as Customers
+from Customers as C 
+left join Orders as O 
+on C.id = O.customerID
+where O.customerID IS NULL
